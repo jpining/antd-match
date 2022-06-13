@@ -5,17 +5,7 @@
  * @Date: 2022-05-20 00:19:09
  * @LastEditTime: 2022-05-31 21:34:41
  */
-import React, {
-  FC,
-  ForwardRefRenderFunction,
-  ReactElement,
-  ReactNode,
-  Ref,
-  RefCallback,
-  useCallback,
-  useEffect,
-  useImperativeHandle,
-} from 'react';
+import React, { ForwardRefRenderFunction, useCallback, useImperativeHandle } from 'react';
 import { Select } from 'antd';
 import { SelectProps } from 'antd/es/select';
 import { OptionProps, SelectValue } from 'antd/lib/select';
@@ -25,11 +15,11 @@ const MySelect: any = Select;
 interface MachSelectOptionType extends Omit<OptionProps, ''> {
   // children?:ReactNode,
 }
-type ValueType = any;
 interface TagSelectorProps extends Omit<SelectProps, ''> {
   /**
    * 默认键值对为 name 和 value 可以通过配置labelKey和valueKey进行更改
    * **/
+  // renderArr?: RenderListType<RenderType>;
   renderArr?: RenderType | Array<any>;
   labelKey?: string;
   valueKey?: string;
@@ -47,9 +37,10 @@ type RenderType = {
   name: string;
   value: string;
 }[];
-export interface RenderListType<T = RenderType> {}
+export type RenderListType<T extends Record<string, any> | RenderType> = T[];
+// = (RenderType)
 interface MachSelectType extends Omit<SelectProps, 'children'> {
-  renderArr?: RenderType;
+  renderArr?: RenderListType<RenderType>;
   labelKey: string;
   valueKey: string;
   children?: [];
@@ -59,12 +50,11 @@ const MachSelectOption = ({ children, ...reset }: MachSelectOptionType) => {
   return <Select.Option {...reset}>{children}</Select.Option>;
 };
 
-const MachSelect: ForwardRefRenderFunction<{}, TagSelectorProps> = (props, ref: any) => {
-  // function MachSelect<T extends ValueType | ValueType[]>(props: TagSelectorProps<T>, ref:any) {
-  const {
+const MachSelect: ForwardRefRenderFunction<{}, TagSelectorProps> = (
+  {
     value,
     onChange,
-    renderArr,
+    renderArr = [],
     optionFilterProp = 'children',
     showSearch = true,
     allowClear = true,
@@ -73,12 +63,14 @@ const MachSelect: ForwardRefRenderFunction<{}, TagSelectorProps> = (props, ref: 
     valueKey = 'value',
     children,
     ...otherParams
-  } = props;
+  },
+  ref: any,
+) => {
+  // function MachSelect<T extends ValueType | ValueType[]>(props: TagSelectorProps<T>, ref:any) {
   useImperativeHandle(ref, () => ({
     value,
     onChange,
   }));
-  // renderArr?.aa
   const renderSelectOption = useCallback(() => {
     if (Array.isArray(renderArr)) {
       return renderArr.map((item, index) => {
@@ -89,7 +81,7 @@ const MachSelect: ForwardRefRenderFunction<{}, TagSelectorProps> = (props, ref: 
         );
       });
     } else if (children) {
-      const render: any = Array.from(children);
+      const render = Array.from(children);
       if (render.length > 0) {
         return render.map((item: any) => {
           const { children } = item.props;
@@ -104,16 +96,16 @@ const MachSelect: ForwardRefRenderFunction<{}, TagSelectorProps> = (props, ref: 
     }
     return;
   }, [renderArr]);
-  const params: any = { optionFilterProp, showSearch, allowClear, placeholder, onChange };
+  const params: TagSelectorProps = {
+    optionFilterProp,
+    showSearch,
+    allowClear,
+    placeholder,
+    onChange,
+  };
   if (value) params.value = value;
   return (
     <MySelect
-      // optionFilterProp={optionFilterProp}
-      // showSearch={showSearch}
-      // allowClear={allowClear}
-      // placeholder={placeholder}
-      // value={value}
-      // onChange={onChange}
       {...params}
       getPopupContainer={(triggerNode: any) => triggerNode.parentElement as HTMLElement}
       {...otherParams}

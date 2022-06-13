@@ -12,7 +12,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "antd-mach": ["src/index.ts"]
+      "antd-match": ["src/index.ts"]
     }
   }
 }

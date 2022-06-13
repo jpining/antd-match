@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "antd-mach",
+  "name": "antd-match",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
@@ -13,6 +13,7 @@
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build"
   },
+  "main": "es/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
   "gitHooks": {
@@ -26,6 +27,12 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "peerDependencies": {
+    "antd": "^3.23.6",
+    "react":">=16.9.0",
+    "react-dom":">=16.9.0"
+  },
+  "files": ["es","lib"],
   "dependencies": {
     "react": "^16.12.0 || ^17.0.0"
   },

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { MachSelect } from 'antd-mach';
+import { MachSelect } from 'antd-match';
 import { SelectValue } from 'antd/es/select';
 
 const MachSelectDemo: FC = () => {
