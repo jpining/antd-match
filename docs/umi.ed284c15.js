@@ -49,7 +49,7 @@
     (n.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (n.p = '/antd-mach/'),
+    (n.p = '/antd-match/'),
     n((n.s = 0));
 })({
   '++zV': function (e, t, n) {
@@ -6382,7 +6382,7 @@
         return i;
       });
     var r = n('YS25'),
-      o = { basename: '/antd-mach/' };
+      o = { basename: '/antd-match/' };
     window.routerBase && (o.basename = window.routerBase);
     var i = Object({ NODE_ENV: 'production' }).__IS_SERVER ? null : Object(r['a'])(o),
       a = function () {
@@ -33084,7 +33084,7 @@
   },
   q3YX: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"*":[{"path":"/","title":"Antd Match - \u57fa\u4e8e Ant Design\uff0c\u4f5c\u4e3a Ant Design \u8865\u5145\u6027\u7ec4\u4ef6\u5e93\uff0c\u6ee1\u8db3\u4e2d\u540e\u53f0\u7b49\u4e1a\u52a1\u573a\u666f\u901a\u7528\u6027\u7ec4\u4ef6\u9700\u6c42\u3002","meta":{"order":10}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"antd-mach","logo":"https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
+      '{"menus":{"en-US":{"*":[{"path":"/","title":"Antd Match - \u57fa\u4e8e Ant Design\uff0c\u4f5c\u4e3a Ant Design \u8865\u5145\u6027\u7ec4\u4ef6\u5e93\uff0c\u6ee1\u8db3\u4e2d\u540e\u53f0\u7b49\u4e1a\u52a1\u573a\u666f\u901a\u7528\u6027\u7ec4\u4ef6\u9700\u6c42\u3002","meta":{"order":10}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"antd-match","logo":"https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
     );
   },
   qHiR: function (e, t, n) {},
@@ -35363,7 +35363,7 @@
                 'Antd Match - \u57fa\u4e8e Ant Design\uff0c\u4f5c\u4e3a Ant Design \u8865\u5145\u6027\u7ec4\u4ef6\u5e93\uff0c\u6ee1\u8db3\u4e2d\u540e\u53f0\u7b49\u4e1a\u52a1\u573a\u666f\u901a\u7528\u6027\u7ec4\u4ef6\u9700\u6c42\u3002',
             },
           ],
-          title: 'antd-mach',
+          title: 'antd-match',
           component: (e) => e.children,
         },
       ];
@@ -35386,7 +35386,7 @@
                 history: Object(o['a'])(e.hot),
                 isServer: Object({ NODE_ENV: 'production' }).__IS_SERVER,
                 rootElement: 'root',
-                defaultTitle: 'antd-mach',
+                defaultTitle: 'antd-match',
               },
             });
             return Object(a['renderClient'])(t);
