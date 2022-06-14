@@ -7,13 +7,24 @@
  */
 import { defineConfig } from 'dumi';
 
+const repo = 'antd-mach';
+const logo =
+  'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png';
+
 export default defineConfig({
-  title: 'antd-mach',
-  favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  title: repo,
+  favicon: logo,
+  logo: logo,
   outputPath: 'docs',
   mode: 'site',
+  // gitpage
+  base: `/${repo}/`,
+  publicPath: `/${repo}/`,
+  hash: true,
+  resolve: {
+    // 配置 dumi 嗅探的文档目录
+    includes: ['mdx'],
+  },
   extraBabelPlugins: [
     [
       'babel-plugin-import',
