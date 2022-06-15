@@ -14,5 +14,8 @@
       "@/*": ["src/*"],
       "antd-match": ["src/index.ts"]
     }
+  },
+  "vueCompilerOptions": {
+    "experimentalDisableTemplateSupport": true
   }
 }

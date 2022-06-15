@@ -1,12 +1,12 @@
 {
-  "private": true,
   "name": "antd-match",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "father-build",
+    "docTem": "node docs.js",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
@@ -27,19 +27,30 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpining/antd-match"
+  },
+  "homepage": "https://github.com/jpining/antd-match#readme",
   "peerDependencies": {
     "antd": "^3.23.6",
-    "react":">=16.9.0",
-    "react-dom":">=16.9.0"
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
-  "files": ["es","lib"],
+  "files": [
+    "es",
+    "lib"
+  ],
   "dependencies": {
+    "ejs": "3.1.6",
+    "lodash": "^4.17.21",
     "react": "^16.12.0 || ^17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
+    "@types/lodash": "^4.14.182",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
     "antd": "^3.23.6",
@@ -52,6 +63,7 @@
     "yorkie": "^2.0.0"
   },
   "engines": {
-    "antd":"^3.23.6"
-  }
+    "antd": "^3.23.6"
+  },
+  "license": "MIT"
 }

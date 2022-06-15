@@ -1,45 +1,86 @@
----
-title: Antd Match - 基于 Ant Design，作为 Ant Design 补充性组件库，满足中后台等业务场景通用性组件需求。
-order: 10
-sidebar: false
-hero:
-  title: Antd Match
-  desc: 🏆 让中后台开发更简单
-  actions:
-    - text: 🏮🏮 快速开始 →
-      link: /docs/getting-started
+Ant Design 补充性组件库 demo
 
-features:
-  - icon: https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*43rfS4dD0MUAAAAAAAAAAABkARQnAQ
-    title: 简单易用
-    desc: 在 Ant Design 上进行了自己的封装，更加易用
-  - icon: https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg
-    title: Ant Design
-    desc: 与 Ant Design 设计体系一脉相承，无缝对接 antd 项目
-  - icon: https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*cY0tTr8q3Y4AAAAAAAAAAABkARQnAQ
-    title: 预设样式
-    desc: 样式风格与 antd 一脉相承，无需魔改，浑然天成
-  - icon: https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*abGUQKUocSMAAAAAAAAAAABkARQnAQ
-    title: 预设行为
-    desc: 更少的代码，更少的 Bug
-  - icon: https://gw.alipayobjects.com/zos/antfincdn/Eb8IHpb9jE/Typescript_logo_2020.svg
-    title: TypeScript
-    desc: 使用 TypeScript 开发，提供完整的类型定义文件
+运行：
 
-footer: Open-source MIT Licensed | © 2017-present
----
+1. webpack5: `npm start`
 
-## 组件看板
+2. vite2: `npm dev`
 
-| 组件 | 下载量 | 版本 |
-| --- | --- | --- |
-| Antd-Match | [![layout](https://img.shields.io/npm/dw/@ant-design/pro-components.svg)](https://www.npmjs.com/package/@ant-design/pro-components) | [![npm package](https://img.shields.io/npm/v/@ant-design/pro-components.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@ant-design/pro-components) |
+安装 [npm](https://npmjs.org/) / [yarn](https://yarnpkg.com)
 
-## 🖥 浏览器兼容性
+```js
+npm install antd-match
+yarn add antd-match
+```
 
-- 现代浏览器和 Internet Explorer 11 (with [polyfills](https://stackoverflow.com/questions/57020976/polyfills-in-2019-for-ie11))
-- [Electron](https://www.electronjs.org/)
+### 特点
 
-| [![edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png)](http://godban.github.io/browsers-support-badges/) | [![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png)](http://godban.github.io/browsers-support-badges/) | [![chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png)](http://godban.github.io/browsers-support-badges/) | [![safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)](http://godban.github.io/browsers-support-badges/) | [![electron_48x48](https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png)](http://godban.github.io/browsers-support-badges/) |
-| --- | --- | --- | --- | --- |
-| Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+1.
+
+### 适用场景
+
+1.
+
+```js
+
+```
+
+### 注意点
+
+1. 大部分组件都在生产环境大量使用，个别组件建议不要使用（还在优化中）
+
+## 组件列表
+
+#### 基础组件
+
+- Button (按钮)
+
+### 数据录入
+
+- MatchInput (输入框)
+- MatchSelect (下拉选择)
+- MatchRank (时间选择)
+
+### 其他组件
+
+### 工具函数
+
+### 常量
+
+### Hooks
+
+### 按需加载
+
+```js
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: 'antd-match',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false,
+      },
+    ],
+  ],
+```
+
+2. 直接引用组件
+
+```js
+// 以Button组件为例
+import Button from 'antd-match/es/Button';
+```
+
+### 参考
+
+- [Ant Design](https://ant.design/)
+- [Zarm](https://zarm.gitee.io/)
+- [Vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)
+- [Zent](https://youzan.github.io/zent/zh/guides/install)
+- [Material UI](https://material-ui.com/zh/)
+- [Welcome UI](https://www.welcome-ui.com/)
+- [NutUI](https://nutui.jd.com/3x/#/)
+- [Blueprint](https://blueprintjs.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+持续更新优化中...

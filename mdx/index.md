@@ -29,12 +29,6 @@ features:
 footer: Open-source MIT Licensed | © 2017-present
 ---
 
-## 组件看板
-
-| 组件 | 下载量 | 版本 |
-| --- | --- | --- |
-| Antd-Match | [![layout](https://img.shields.io/npm/dw/@ant-design/pro-components.svg)](https://www.npmjs.com/package/@ant-design/pro-components) | [![npm package](https://img.shields.io/npm/v/@ant-design/pro-components.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@ant-design/pro-components) |
-
 ## 🖥 浏览器兼容性
 
 - 现代浏览器和 Internet Explorer 11 (with [polyfills](https://stackoverflow.com/questions/57020976/polyfills-in-2019-for-ie11))

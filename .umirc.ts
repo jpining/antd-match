@@ -42,5 +42,12 @@ export default defineConfig({
       skipNodeModules: true,
     },
   },
+  navs: [
+    null, // null 值代表保留约定式生成的导航，只做增量配置
+    {
+      title: 'GitHub',
+      path: 'https://github.com/jpining/antd-match',
+    },
+  ],
   // more config: https://d.umijs.org/config
 });
