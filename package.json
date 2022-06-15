@@ -1,6 +1,12 @@
 {
   "name": "antd-match",
+  "description": "🦴 Ant Design 补充性组件库 demo",
   "version": "1.0.1",
+  "keywords": [
+    "antd",
+    "admin",
+    "ant-design"
+  ],
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
