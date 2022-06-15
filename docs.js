@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+// 先弃用
 const ejs = require('ejs');
 const data = require('./doc-data');
 const path = require('path');
